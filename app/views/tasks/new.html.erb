@@ -1,0 +1,15 @@
+
+<div class="jumbotron">
+  <div class="text-center">
+
+    <h1>Create a new task</h1>
+
+
+    <%= form_for @task do |t| %>
+
+    <%= t.text_field :name, placeholder: 'name' %>
+    <%= t.number_field :importance, placeholder: 'importance' %>
+    <%= t.submit %>
+    <% end %>
+  </div>
+</div>

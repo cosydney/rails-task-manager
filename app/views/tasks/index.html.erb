@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <div class="text-center">
+    <h1> List of tasks</h1>
+
+    <%= link_to "Add a task", new_task_path, class: "btn btn-primary" %>
+    <br>
+    <ul class="list-unstyled">
+      <br>
+      <% @tasks.each do |task| %>
+      <li>
+        <%= task.name %> [<%= task.importance %>]
+        <%= link_to "View  ", task_path(task) %>
+        <%= link_to 'Edit  ', edit_task_path(task) %>
+        <%= link_to 'Delete  ', task_path(task), method: :delete %>
+        </li>
+        <!-- add S to task  -->
+        <% end %>
+      </ul>
+    </div>
+  </div>
